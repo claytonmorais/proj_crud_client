@@ -1,10 +1,6 @@
 # PROJ CRUD CUSTOMER - POC - SOLIDITY
 Projeto conceito para utilizaçáo de Smart Contract em Solidity
 
-## Iniciando o Projeto
-
-O projeto contém alguns exemplos de um crud com Smart Contracts - Ethereum.
-
 ### Pré requisitos
 
 ```
@@ -18,6 +14,12 @@ Vs Code: 1.57.0 (https://code.visualstudio.com/download)
 
 Ganache: 2.7.1 (https://trufflesuite.com/ganache/)
 
+## Iniciando o Projeto
+
+Para iniciar o projeto é necessário instalar o Truffle com o seguinte comando:
+
+```
+npm install -g truffle@5.11.4
 ```
 
 ## Rodando os Testes
