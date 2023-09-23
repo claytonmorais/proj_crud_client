@@ -30,7 +30,7 @@ contract("StoreCustomer", function (accounts) {
       assert(customer.name === 'Clayton' && customer.age == 43, "Coldn't get Customer");
   });
 
-  it("Update Customer", async ()=>{
+  it("Update Customer - Admin", async ()=>{
       await contract.addCustomer({
           name: 'Clayton',
           age: 43
@@ -46,16 +46,33 @@ contract("StoreCustomer", function (accounts) {
       assert(customer.name === 'Isabel' && customer.age == 38, "Coldn't update Customer");
   });
 
-  it("Add Customer", async ()=>{   
+  it("Delete Customer - Admin", async ()=>{   
       await contract.addCustomer({
           name: 'Clayton',
           age: 43
       });
 
-      await contract.deleteCustomer(1);
+      await contract.deleteCustomer(1,{from: accounts[0]});
 
       const count = await contract.count();
       assert(count.toNumber() === 0, "Coldn't delete Customer");
   });
+
+  it("Delete Customer - Not Admin", async ()=>{   
+    await contract.addCustomer({
+        name: 'Clayton',
+        age: 43
+    });
+
+    let errorMessage;
+    try{
+        const message = await contract.deleteCustomer(1,{from: accounts[1]});    
+    }catch(error){
+        errorMessage = error;
+        console.log(`ERROR: ${error.reason}`);        
+    }
+    assert(errorMessage != undefined, "Delete Customer is success.");
+    
+});
 
 });

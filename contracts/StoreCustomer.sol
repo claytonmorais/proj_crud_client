@@ -5,7 +5,14 @@ contract StoreCustomer {
 
     uint32 private nextId = 0;
 
-    uint32 public count = 0;    
+    uint32 public count = 0; 
+
+    address private immutable owner; 
+
+
+    constructor(){
+      owner = msg.sender;
+    }  
 
     struct Customer{
         string name;
@@ -32,8 +39,8 @@ contract StoreCustomer {
     }
 
     function updateCustomer( uint32 id, Customer memory _customer) public {
-        Customer memory actualCustomer = customers[id];
 
+        Customer memory actualCustomer = customers[id];
         if(actualCustomer.age != 0 && actualCustomer.age != _customer.age){
           actualCustomer.age = _customer.age;
         }
@@ -47,6 +54,7 @@ contract StoreCustomer {
     }
 
     function deleteCustomer( uint32 id) public {
+       require(owner == msg.sender,"Caller is not the owner");
        Customer memory actualCustomer = customers[id];
        if (bytes(actualCustomer.name).length > 0){
          delete customers[id];
