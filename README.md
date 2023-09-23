@@ -33,7 +33,7 @@ Para Rodar os testes unitários, execute os comandos abaixo:
 truffle compile
 
 truffle test
-
+```
 
 ## Rodando local
 
