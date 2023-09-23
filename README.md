@@ -60,7 +60,7 @@ truffle migrate --network development
 
 ## Efetuando deploy na Rede de Teste da Binance
 
-Primeiro é necesário criar um arquivo .env e inserir as 12 palavras da frase secreta no Metamask 
+Primeiro é necesário criar um arquivo .env na raiz do projeto e inserir as 12 palavras da frase secreta no Metamask 
 (É necessário ter uma carteira na metamask)
 
 OBS: Muito cuidado com sua Frase secreta e sua Chave privada.
