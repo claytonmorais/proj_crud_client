@@ -1,3 +1,7 @@
+require("dotenv").config();
+
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+
 module.exports = {
   networks: {
     development: {
@@ -5,7 +9,17 @@ module.exports = {
       port: 7545,
       network_id: "*", // Match any network id
       gas: 5000000
-    }
+    },
+    bsctest: {
+      provider: new HDWalletProvider({
+        mnemonic: {
+            phrase: process.env.SECRET
+         },
+         providerOrUrl: "https://data-seed-prebsc-1-s1.binance.org:8545/"
+      }),
+      network_id: "97"
+    },
+
   },
   compilers: {
     solc: {
