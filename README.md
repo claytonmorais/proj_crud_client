@@ -1,6 +1,7 @@
 # PROJ CRUD CUSTOMER - POC - SOLIDITY
 Projeto conceito para utilizaçáo de Smart Contract em Solidity
 
+
 ### Pré requisitos
 
 ```
@@ -14,12 +15,14 @@ Vs Code: 1.57.0 (https://code.visualstudio.com/download)
 
 Ganache: 2.7.1 (https://trufflesuite.com/ganache/)
 
+```
+
 ## Iniciando o Projeto
 
-Para iniciar o projeto é necessário instalar o Truffle com o seguinte comando:
+Para iniciar o projeto, instale o truffle com o seguinte comando:
 
 ```
-npm install -g truffle@5.11.4
+npm install -g truffle@5.11.5
 ```
 
 ## Rodando os Testes
