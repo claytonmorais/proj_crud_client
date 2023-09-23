@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+import "./CompareUtils.sol";
+
 contract StoreCustomer {
 
     uint32 private nextId = 0;
@@ -25,10 +27,6 @@ contract StoreCustomer {
        return ++nextId;
     }  
 
-    function compareStrings(string memory a, string memory b) private pure returns(bool){
-      return keccak256(bytes(a)) == keccak256(bytes(b));
-    }
-
     function addCustomer(Customer memory _custumer) public  {
       customers[getNextId()] = _custumer;
       count++;   
@@ -45,7 +43,7 @@ contract StoreCustomer {
           actualCustomer.age = _customer.age;
         }
 
-        if (bytes(_customer.name).length > 0 &&  !compareStrings(actualCustomer.name,_customer.name)){
+        if (bytes(_customer.name).length > 0 &&  !CompareUtils.compareStrings(actualCustomer.name,_customer.name)){
           actualCustomer.name = _customer.name;
         }
 
