@@ -3,6 +3,10 @@ require("dotenv").config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 module.exports = {
+  plugins: ["truffle-plugin-verify"],
+  api_keys: {
+    bscscan: process.env.API_KEY
+  },
   networks: {
     development: {
       host: "127.0.0.1",

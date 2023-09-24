@@ -8551,10 +8551,10 @@
     "97": {
       "events": {},
       "links": {
-        "CompareUtils": "0x7E7e269bAFC6b7F3B2c3A865930B242A60722F32"
+        "CompareUtils": "0xfD79277e58C0C945a28206f131F8AC0164ffC6D5"
       },
-      "address": "0x2205065192dCd433c02643aCF0D69cF42149c843",
-      "transactionHash": "0xef71ec2e63ff3a20188cc1c7ba9cb002bf53cf5255c9bd0b3078b019b83998b6"
+      "address": "0xCF692D03Ea791A3e790B77A553134f2bEe5605D8",
+      "transactionHash": "0xdc2ea0f2a7ca3503d920c3a417712bbcf9922b8ace55679cabfa19179c3461eb"
     },
     "5777": {
       "events": {},
@@ -8566,7 +8566,7 @@
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-09-23T23:11:38.187Z",
+  "updatedAt": "2023-09-24T00:19:52.731Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
