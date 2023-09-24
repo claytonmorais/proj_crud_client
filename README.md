@@ -86,6 +86,17 @@ truffle migrate --network bscscan
 
 ## Verificando os Contratos na BSCScan
 
+
+Efetue um cadastro no site da bscscan (https://bscscan.com/)
+
+Após o cadastro crie uma Api Key - OTHERS >> Api Keys
+
+No arquivo .env defina a variavel API_KEY
+
+```
+API_KEY=<API KEY criada no site bscscan>
+```
+
 Após o deploy, obtenha os endereços dos dois contratos deployados (CompareUtils e StoreCustomer) e execute
 os comandos para verificação:
 
